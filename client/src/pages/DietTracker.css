@@ -1,0 +1,439 @@
+/* Diet Tracker Enhanced Styles */
+
+/* Tabs */
+.tracker-tabs {
+    display: flex;
+    gap: 4px;
+    padding: 4px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    margin-bottom: 24px;
+}
+
+.tracker-tab {
+    flex: 1;
+    padding: 12px 20px;
+    border: none;
+    border-radius: var(--radius-md);
+    background: transparent;
+    color: var(--text-secondary);
+    font-family: var(--font-family);
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.tracker-tab:hover {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.tracker-tab.active {
+    background: rgba(6, 182, 212, 0.12);
+    color: var(--accent-secondary);
+    border: 1px solid rgba(6, 182, 212, 0.25);
+}
+
+/* Date Selector */
+.date-selector {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.date-input {
+    max-width: 180px;
+    text-align: center;
+}
+
+/* Nutrition Summary Rings */
+.nutrition-summary {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.summary-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 16px;
+}
+
+.nutrition-ring-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+}
+
+.ring-visual {
+    width: 80px;
+    height: 80px;
+    position: relative;
+}
+
+.ring-svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+}
+
+.ring-bg {
+    fill: none;
+    stroke: var(--bg-secondary);
+    stroke-width: 3;
+}
+
+.ring-fill {
+    fill: none;
+    stroke-width: 3;
+    stroke-linecap: round;
+    transition: stroke-dasharray 1s ease;
+}
+
+.ring-value {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.ring-label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.ring-target {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Add Meal Button */
+.add-meal-btn {
+    width: 100%;
+    margin-bottom: 20px;
+    border-style: dashed;
+    background: rgba(6, 182, 212, 0.05);
+    border: 2px dashed rgba(6, 182, 212, 0.3);
+    color: var(--accent-secondary);
+}
+
+.add-meal-btn:hover {
+    background: rgba(6, 182, 212, 0.1);
+}
+
+/* Add Meal Form */
+.add-meal-form {
+    margin-bottom: 20px;
+}
+
+.add-meal-form h4 {
+    margin-bottom: 16px;
+}
+
+/* Meal Type Headers */
+.meals-by-type {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.meal-type-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.meal-type-header {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    padding-bottom: 4px;
+}
+
+/* Meal Log Cards */
+.meal-log-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: 14px 16px;
+    transition: var(--transition);
+}
+
+.meal-log-card:hover {
+    border-color: var(--border-light);
+}
+
+.meal-log-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.meal-log-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.meal-log-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.meal-log-grams {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.meal-log-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.icon-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.85rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+}
+
+.icon-btn:hover {
+    background: var(--bg-secondary);
+}
+
+.icon-btn-danger:hover {
+    background: rgba(239, 68, 68, 0.15);
+}
+
+/* Macro Chips */
+.meal-log-macros {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.macro-chip {
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 500;
+}
+
+.macro-chip.cal {
+    background: rgba(6, 182, 212, 0.12);
+    color: #22d3ee;
+}
+
+.macro-chip.prot {
+    background: rgba(16, 185, 129, 0.12);
+    color: #6ee7b7;
+}
+
+.macro-chip.carb {
+    background: rgba(245, 158, 11, 0.12);
+    color: #fbbf24;
+}
+
+.macro-chip.fat {
+    background: rgba(239, 68, 68, 0.12);
+    color: #fca5a5;
+}
+
+/* Edit Panel */
+.meal-edit-panel {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+.edit-macros-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+}
+
+.edit-macro label {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.edit-macro .form-input {
+    padding: 8px 10px;
+    font-size: 0.85rem;
+}
+
+/* Checkbox Label */
+.checkbox-label {
+    display: flex !important;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.checkbox-label input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--accent-primary);
+    cursor: pointer;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-secondary);
+}
+
+.empty-icon {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.empty-state h3 {
+    margin-bottom: 8px;
+    color: var(--text-primary);
+}
+
+.empty-state p {
+    font-size: 0.9rem;
+}
+
+/* Weekly Plans */
+.plans-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.plan-list-card {
+    padding: 20px;
+}
+
+.plan-list-card.plan-active {
+    border-color: rgba(16, 185, 129, 0.3);
+    box-shadow: 0 0 15px rgba(16, 185, 129, 0.08);
+}
+
+.plan-list-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.plan-list-header h3 {
+    text-transform: capitalize;
+    font-size: 1.05rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.plan-list-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.plan-targets {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 12px;
+}
+
+.target-chip {
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 0.8rem;
+    background: var(--bg-secondary);
+    color: var(--text-secondary);
+}
+
+/* Expanded Plan View */
+.plan-expanded {
+    margin-top: 16px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.expanded-meal h4 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+}
+
+.expanded-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.expanded-item {
+    padding: 4px 10px;
+    background: var(--bg-secondary);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* Meal Item Macros (in generated plans) */
+.meal-item-macros {
+    display: flex;
+    gap: 8px;
+    font-size: 0.8rem;
+    color: var(--accent-secondary);
+    white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .summary-grid {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .edit-macros-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .tracker-tabs {
+        flex-direction: column;
+    }
+
+    .plan-list-header {
+        flex-direction: column;
+    }
+}

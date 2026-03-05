@@ -1,0 +1,262 @@
+/* Shared Planner Styles (Diet + Exercise) */
+
+.planner-page {
+    max-width: 900px;
+}
+
+.planner-form-card {
+    max-width: 600px;
+}
+
+.planner-form-card h3 {
+    font-size: 1.2rem;
+}
+
+/* Plan Overview */
+.plan-overview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.overview-stat {
+    flex: 1;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    padding: 20px 16px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.overview-icon {
+    font-size: 1.5rem;
+}
+
+.overview-value {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent-secondary);
+}
+
+.overview-label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Meals Section */
+.meals-section h2,
+.schedule-section h2 {
+    font-size: 1.3rem;
+    margin-bottom: 16px;
+}
+
+.meals-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.meal-card {
+    padding: 20px;
+}
+
+.meal-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.meal-header h3 {
+    font-size: 1.1rem;
+}
+
+.meal-time {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.meal-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.meal-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-sm);
+}
+
+.meal-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.meal-food {
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+.meal-portion {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.meal-calories {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--accent-secondary);
+    white-space: nowrap;
+}
+
+/* Plan Tips */
+.plan-tips {
+    margin-top: 24px;
+}
+
+.plan-tips h3 {
+    margin-bottom: 12px;
+}
+
+.plan-tips ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.plan-tips li {
+    padding-left: 20px;
+    position: relative;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+}
+
+.plan-tips li::before {
+    content: '✦';
+    position: absolute;
+    left: 0;
+    color: var(--accent-secondary);
+    font-size: 0.7rem;
+    top: 4px;
+}
+
+/* Exercise Schedule */
+.schedule-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.day-card {
+    padding: 24px;
+}
+
+.day-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.day-header h3 {
+    font-size: 1.1rem;
+}
+
+.exercise-section {
+    margin-bottom: 16px;
+}
+
+.exercise-section h4 {
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+    color: var(--text-secondary);
+}
+
+.warmup-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.warmup-list li {
+    padding: 6px 14px;
+    background: var(--bg-secondary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.exercises-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.exercise-item {
+    padding: 14px 16px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+}
+
+.exercise-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.exercise-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.exercise-details {
+    display: flex;
+    gap: 6px;
+}
+
+.exercise-notes {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.exercise-alt {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: var(--accent-secondary);
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .plan-overview {
+        flex-direction: column;
+    }
+
+    .exercise-main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

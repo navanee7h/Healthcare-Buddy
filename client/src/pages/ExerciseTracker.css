@@ -1,0 +1,177 @@
+/* Exercise Tracker Specific Styles */
+
+/* Summary Stats Row */
+.exercise-summary {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-xl);
+    padding: 20px;
+    margin-bottom: 24px;
+}
+
+.summary-stats-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.ex-stat-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    padding: 16px 10px;
+    border-radius: var(--radius-md);
+    background: var(--bg-secondary);
+    text-align: center;
+}
+
+.ex-stat-icon {
+    font-size: 1.4rem;
+}
+
+.ex-stat-value {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+}
+
+.ex-stat-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.ex-stat-target {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+}
+
+.ex-stat-card.burned {
+    border-bottom: 3px solid #f59e0b;
+}
+
+.ex-stat-card.consumed {
+    border-bottom: 3px solid #06b6d4;
+}
+
+.ex-stat-card.duration {
+    border-bottom: 3px solid #8b5cf6;
+}
+
+.ex-stat-card.surplus {
+    border-bottom: 3px solid #ef4444;
+}
+
+.ex-stat-card.deficit {
+    border-bottom: 3px solid #10b981;
+}
+
+.ex-stat-card.surplus .ex-stat-value {
+    color: #fca5a5;
+}
+
+.ex-stat-card.deficit .ex-stat-value {
+    color: #6ee7b7;
+}
+
+/* Exercise Schedule (Generated Plans) */
+.exercise-schedule {
+    margin-top: 20px;
+}
+
+.exercise-schedule h2 {
+    margin-bottom: 16px;
+}
+
+.schedule-day {
+    padding: 20px;
+    margin-bottom: 16px;
+}
+
+.schedule-day-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.schedule-day-header h3 {
+    font-size: 1.05rem;
+}
+
+.warmup-section {
+    margin-bottom: 12px;
+}
+
+.warmup-section h4 {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 6px;
+}
+
+.warmup-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.exercises-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.exercise-item {
+    padding: 12px;
+    background: var(--bg-secondary);
+    border-radius: var(--radius-md);
+}
+
+.exercise-item-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.exercise-item-main strong {
+    font-size: 0.95rem;
+}
+
+.exercise-meta {
+    display: flex;
+    gap: 12px;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+}
+
+.exercise-meta span::before {
+    content: '';
+}
+
+.exercise-notes {
+    margin-top: 6px;
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
+
+.exercise-alt {
+    margin-top: 4px;
+    font-size: 0.8rem;
+    color: var(--accent-secondary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .summary-stats-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
