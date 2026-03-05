@@ -24,7 +24,7 @@ An AI-powered health and fitness companion web application designed to help user
 - **Frontend:** React (Vite), React Router, raw CSS for responsive and modern theming.
 - **Backend:** Node.js, Express.js
 - **Database:** MongoDB Atlas (Mongoose ODM)
-- **AI Integration:** X.AI Grok API (`grok-beta` model)
+- **AI Integration:** Groq API
 - **Authentication:** JSON Web Tokens (JWT) & bcryptjs for secure password hashing.
 
 ---
@@ -38,7 +38,7 @@ Follow these instructions to get a copy of the project running on your local mac
 You will need the following installed:
 - [Node.js](https://nodejs.org/)
 - A [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) Cluster (ensure your IP is whitelisted)
-- An API Key from [X.AI (Grok)](https://x.ai/api)
+- An API Key from Groq
 
 ### 1. Clone the repository
 
@@ -62,7 +62,7 @@ Create a `.env` file in the `server` directory and add the following environment
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
 JWT_SECRET=your_super_secret_jwt_key
-GROK_API_KEY=your_x_ai_grok_api_key
+GROQ_API_KEY=your_groq_api_key
 ```
 
 Start the backend development server:
